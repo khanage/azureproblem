@@ -1,0 +1,47 @@
+﻿<rules  xmlns="http://schemas.microsoft.com/practices/2011/entlib/autoscaling/rules" enabled="true">
+  <constraintRules>
+    <rule name="Default" description="Always active"
+          enabled="true" rank="1">
+      <actions>
+        <range min="4" max="5" target="AutoscalingApplicationRole"/>
+      </actions>
+    </rule>
+
+    <rule name="Peak" description="Active at peak times"
+          enabled="true" rank="100">
+      <actions>
+        <range min="4" max="6" target="AutoscalingApplicationRole"/>
+      </actions>
+      <timetable startTime="08:00:00" duration="02:00:00">
+        <daily/>
+      </timetable>
+    </rule>
+  </constraintRules>
+
+  <reactiveRules>
+    <rule name="ScaleUp" description="Increases instance count"
+          enabled="true" rank="10">
+      <when>
+        <greater operand="Avg_CPU_AutoscalingApplicationRole" than="80"/>
+      </when>
+      <actions>
+        <scale target="AutoscalingApplicationRole" by="1"/>
+      </actions>
+    </rule>
+    <rule name="ScaleDown" description="Decreases instance count"
+          enabled="true" rank="10">
+      <when>
+        <less operand="Avg_CPU_AutoscalingApplicationRole" than="20"/>
+      </when>
+      <actions>
+        <scale target="AutoscalingApplicationRole" by="-1"/>
+      </actions>
+    </rule>
+  </reactiveRules>
+
+  <operands>
+    <performanceCounter alias="Avg_CPU_AutoscalingApplicationRole"
+      performanceCounterName="\Processor(_Total)\% Processor Time"
+      aggregate="Average" source="AutoscalingApplicationRole" timespan="00:45:00"/>
+  </operands>
+</rules>

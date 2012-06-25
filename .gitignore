@@ -1,0 +1,12 @@
+!packages/*
+*.dll
+_ReSharper.*
+*.ReSharper.*
+*.suo
+*/obj/*
+*/bin/*
+*/csx/Debug/*
+*/csx/Release/*
+*.csproj.user
+*.ccproj.user
+*.pdb

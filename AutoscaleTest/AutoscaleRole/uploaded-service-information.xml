@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<serviceModel xmlns="http://schemas.microsoft.com/practices/2011/entlib/autoscaling/serviceModel">
+  <subscriptions>
+    <subscription name="Carsales"
+                  certificateThumbprint="DC560B759C7958CCBCBCA4E1518420E59AED0F36"
+                  subscriptionId="9464d918-c6c7-4265-8f55-4a29a5a86d24"
+                  certificateStoreLocation="CurrentUser"
+                  certificateStoreName="My">
+      <services>
+        <service dnsPrefix="csnimageserverproto" slot="Staging">
+          <roles>
+            <role alias="AutoscalingApplicationRole"
+                  roleName="Csn.ImageServer.Web"
+                  wadStorageAccountName="targetstorage"/>
+          </roles>
+        </service>
+      </services>
+      <storageAccounts>
+        <storageAccount alias="targetstorage"
+          connectionString="UseDevelopmentStorage=true">
+          <!--connectionString="DefaultEndpointsProtocol=https;AccountName=[storageaccountname];AccountKey=[storageaccountkey]">-->
+        </storageAccount>
+      </storageAccounts>
+    </subscription>
+  </subscriptions>
+</serviceModel>

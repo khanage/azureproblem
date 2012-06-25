@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AutoscaleTest", "AutoscaleTest\AutoscaleTest.ccproj", "{55F2148E-B4FA-430F-8FF7-28D6397DEF80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole", "WebRole\WebRole.csproj", "{F4C94AE7-B772-4E94-AFA7-D89617E9AB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoscaleRole", "AutoscaleRole\AutoscaleRole.csproj", "{EEBE94C1-4B8A-4A08-893C-AF0E64C55F42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F2148E-B4FA-430F-8FF7-28D6397DEF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F2148E-B4FA-430F-8FF7-28D6397DEF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F2148E-B4FA-430F-8FF7-28D6397DEF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F2148E-B4FA-430F-8FF7-28D6397DEF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C94AE7-B772-4E94-AFA7-D89617E9AB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C94AE7-B772-4E94-AFA7-D89617E9AB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C94AE7-B772-4E94-AFA7-D89617E9AB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C94AE7-B772-4E94-AFA7-D89617E9AB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBE94C1-4B8A-4A08-893C-AF0E64C55F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBE94C1-4B8A-4A08-893C-AF0E64C55F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBE94C1-4B8A-4A08-893C-AF0E64C55F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBE94C1-4B8A-4A08-893C-AF0E64C55F42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.Autoscaling.5.0.1118.2\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.Autoscaling.5.0.1118.2\DesignTime
+	EndGlobalSection
+EndGlobal
